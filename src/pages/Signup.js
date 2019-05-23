@@ -37,6 +37,15 @@ class Signup extends Component {
             value={password}
             onChange={this.handleChange}
           />
+
+          <label>Email:</label>
+          <input
+            type="email"
+            name="email"
+            value={email}
+            onChange={this.handleChange}
+          />
+
           <input type="submit" value="Signup" />
         </form>
         <p>
