@@ -13,7 +13,7 @@ import AnonRoute from "./components/AnonRoute";
 import AuthProvider from "./lib/AuthProvider";
 import Preference from "./pages/Preference";
 import Prelogin from "./components/Prelogin";
-import Feed from "./components/Feed";
+import Feed from "./pages/Feed";
 
 class App extends Component {
   render() {
@@ -26,6 +26,7 @@ class App extends Component {
             <PrivateRoute exact path="/private" component={Private} />
             <PrivateRoute exact path="/Preference" component={Preference}/>
             <PrivateRoute exact path="/Feed" component={Feed}/>
+
             <Route exact path="/*" component={Error}/>
           </Switch>
       </AuthProvider>
