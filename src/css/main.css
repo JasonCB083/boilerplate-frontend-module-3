@@ -20,7 +20,8 @@
   justify-content: space-evenly;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(180deg, rgba(241, 55, 60, 0.766544) 0%, rgba(255, 122, 1, 0.441614) 100%), url(https://images.unsplash.com/photo-1507034589631-9433cc6bc453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=662&q=80) no-repeat center; }
+  background: linear-gradient(180deg, rgba(241, 55, 60, 0.766544) 0%, rgba(255, 122, 1, 0.441614) 100%), url("/images/preloginclimber.jpg") no-repeat center;
+  background-size: 148%; }
   .prelogin-title {
     text-align: center;
     color: white;
@@ -78,7 +79,45 @@ body {
     padding: 16px 43px; }
   .login p {
     font-size: 18px; }
-  .login .signup-link {
+  .login .login-link {
+    text-decoration: none; }
+
+body {
+  margin: 0; }
+
+.signup {
+  height: 100vh;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, rgba(241, 55, 60, 0.766544) 0%, rgba(255, 122, 1, 0.441614) 100%);
+  text-align: center; }
+  .signup-title {
+    color: white;
+    font-size: 60px;
+    z-index: 4; }
+  .signup-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px 35px;
+    align-items: center; }
+  .signup-input {
+    margin: 12px;
+    border-radius: 33px;
+    border-style: solid;
+    border-color: #f1373c;
+    font-size: 17px;
+    padding: 16px 30px; }
+    .signup-input::placeholder {
+      color: lightgray; }
+  .signup .btn {
+    background: linear-gradient(96deg, #f1373c 0%, #ff7a01 100%);
+    margin: 8px 19px;
+    padding: 16px 43px; }
+  .signup p {
+    font-size: 18px; }
+  .signup .signup-link {
     text-decoration: none; }
 
 body {

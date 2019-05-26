@@ -28,13 +28,17 @@ class Login extends Component {
 
         <img className="login-image" src="/images/Ellipse.png" alt=""/>
         <form className="login-form" onSubmit={this.handleFormSubmit}>
-          <input className="login-input" placeholder="User please"
+          <input
+            className="login-input"
+            placeholder="User please"
             type="text"
             name="username"
             value={username}
             onChange={this.handleChange}
           />
-          <input className="login-input" placeholder="Password"
+          <input
+            className="login-input"
+            placeholder="Password"
             type="password"
             name="password"
             value={password}
@@ -45,7 +49,7 @@ class Login extends Component {
 
         <p>
             Create an amazing account?
-            <Link className="signup-link" to={"/signup"}> Signup</Link>
+            <Link className="login-link" to={"/signup"}> Signup</Link>
         </p>
       </div>
     );

@@ -24,42 +24,48 @@ class Signup extends Component {
   render() {
     const { username, password, email, city} = this.state;
     return (
-      <div>
-        <form onSubmit={this.handleFormSubmit}>
-          <label>Username:</label>
+      <div className="signup">
+        <h1 className="signup-title">PlayPix</h1>
+
+        <form className="signup-form" onSubmit={this.handleFormSubmit}>
           <input
+            placeholder="Username"
+            className="signup-input"
             type="text"
             name="username"
             value={username}
             onChange={this.handleChange}
           />
-          <label>Password:</label>
           <input
+            placeholder="Password"
+            className="signup-input"
             type="password"
             name="password"
             value={password}
             onChange={this.handleChange}
           />
-          <label>Email:</label>
           <input
+            placeholder="Email"
+            className="signup-input"
             type="text"
             name="email"
             value={email}
             onChange={this.handleChange}
           />
-          <label>City:</label>
           <input
+            placeholder="City"
+            className="signup-input"
             type="text"
             name="city"
             value={city}
             onChange={this.handleChange}
           />
 
-          <input type="submit" value="Signup" />
+          <input className="btn" type="submit" value="Signup" />
         </form>
         <p>
-          Already have account?
-          <Link to={"/login"}> Login</Link>
+          Have a PlayPix account?
+          <Link className="signup-link" to={"/login"}> Login</Link>
         </p>
       </div>
     );
