@@ -24,7 +24,7 @@ class Login extends Component {
     return (
       <div className="login">
         <span className="circle"></span>
-        <h1 className="login-title">PlayPix</h1>
+        <h1 className="login-title">playpix</h1>
 
         <img className="login-image" src="/images/Ellipse.png" alt=""/>
         <form className="login-form" onSubmit={this.handleFormSubmit}>

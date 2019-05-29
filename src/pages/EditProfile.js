@@ -4,25 +4,27 @@ import { Link } from 'react-router-dom';
 import profile from './../lib/profile-service';
 
 class EditProfile extends Component {
+
   state = {
     username: '',
     email: '',
-    city: ''
-    // image: ''
+    city: '',
+    image: '',
+    sport: ''
   }
 
   handleFormSubmit = (e) => {
-    console.log('LOG', this.state, this.props.user)
     e.preventDefault();
-    const { username, email, city } = this.state;
+    const { username, email, city, image, sport} = this.state;
     const { id } = this.props.match.params;
 
-    profile.editOne(username, email, city)
+    profile.editOne(username, email, city, image, sport)
     this.setState({
       username: '',
       email: '',
-      city: ''
-      // image: ''
+      city: '',
+      image: '',
+      sport: ''
     })
   }
 
@@ -35,7 +37,7 @@ class EditProfile extends Component {
     const file = event.target.files[0];
     const uploadData = new FormData()
     uploadData.append('photo', file)
-
+    console.log(uploadData)
     profile.imageUpload(uploadData)
     .then((image) => {
       this.setState({
@@ -50,9 +52,15 @@ class EditProfile extends Component {
   render() {
     return (
       <div>
+        <Link to={'/feed'}>
+        <button>feed</button>
+        </Link>
 
-        <Link to='/buddies'><button>Buddies</button></Link>
+        <Link to={'/preference'}>
+        <button>Preference</button>
+        </Link>
 
+        {/* <button onClick={logout}>log out</button> */}
         <form onSubmit={this.handleFormSubmit}>
           <label>User Name:</label>
             <input
@@ -81,10 +89,25 @@ class EditProfile extends Component {
               onChange={this.handleChange}
             />
 
+            <label>Sport:</label>
+            <input
+              type="text"
+              name="sport"
+              placeholder="sport"
+              value={this.sport}
+              onChange={this.handleChange}
+            />
+
+            <label>Picture:</label>
+            <input
+              type="file"
+              onChange={this.fileOnchange}
+            />
+
             <input type="submit" value="Send" />
         </form>
       </div>
     )
   }
 }
-export default withAuth(EditProfile);
+export default withAuth(EditProfile)

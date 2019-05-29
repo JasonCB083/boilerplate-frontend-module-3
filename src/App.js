@@ -14,9 +14,10 @@ import AuthProvider from "./lib/AuthProvider";
 import Preference from "./pages/Preference";
 import Prelogin from "./components/Prelogin";
 import Feed from "./pages/Feed";
+import Feed2 from "./pages/Feed2";
 import userProfile from "./components/userProfile";
 import EditProfile from "./pages/EditProfile";
-
+import Buddies from './pages/buddies';
 
 class App extends Component {
   render() {
@@ -28,7 +29,8 @@ class App extends Component {
             <AnonRoute exact path="/login" component={Login} />
             <PrivateRoute exact path="/private" component={Private} />
             <PrivateRoute exact path="/Preference" component={Preference}/>
-            <PrivateRoute exact path="/Feed" component={Feed}/>
+            <PrivateRoute exact path="/feed" component={Feed2}/>
+            <PrivateRoute exact path="/buddies" component={Buddies}/>
             <PrivateRoute exact path="/userProfile" component={userProfile}/>
             <PrivateRoute exact path="/EditProfile" component={EditProfile}/>
 

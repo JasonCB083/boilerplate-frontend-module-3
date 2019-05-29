@@ -1,9 +1,11 @@
 import axios from "axios";
+const baseURL = process.env.REACT_APP_API_URL;
 
 class Profile {
   constructor() {
     this.profile = axios.create({
-      baseURL: "http://localhost:5000/user",
+      baseURL: process.env.REACT_APP_API_URL+"/user",
+
       withCredentials: true
     });
   }
@@ -16,14 +18,14 @@ class Profile {
     return this.profile.get(`/${id}`).then(response => response.data);
   }
 
-  editOne(username, email, city,  id) {
-    return this.profile.put('/edit',{ username, email, city, id}).then(response => response.data);
+  editOne(username, email, city, image, id) {
+    return this.profile.put('/edit',{ username, email, city, image, id}).then(response => response.data);
   }
 
-  // imageUpload(file) {
-  //   return this.profile.post('/edit', file)
-  //   .then(({data}) => data)
-  // }
+  imageUpload(file) {
+    return this.profile.post('/edit', file)
+    .then(({data}) => data)
+  }
 }
 const profile = new Profile();
 
