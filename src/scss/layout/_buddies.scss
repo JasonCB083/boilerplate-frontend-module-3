@@ -1,0 +1,53 @@
+.buddies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px 10px;
+  box-shadow: 1px 1px 1px 1px #00000094;
+  border-radius: 5px;
+  background-color: white;
+  margin: 10px;
+
+  &-avatar {
+    text-align: center;
+    height: 60px;
+    width: 80%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &-img {
+    max-height: 83px;
+  }
+  &-name {
+
+  }
+
+  &-half {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+
+  &-btn-container {
+    justify-content: flex-end;
+  }
+
+  &-btn {
+    border-radius: 10px;
+    background: linear-gradient(96deg, rgba(241,55,60,1) 0%, rgba(255,122,1,1) 100%);
+    margin: 8px 10px;
+    padding: 10px 13px;
+    justify-self: end
+  }
+
+  &-img {
+    height: 20px;
+    width: auto;
+  }
+}
+
+
+body {
+  margin: 0;
+}

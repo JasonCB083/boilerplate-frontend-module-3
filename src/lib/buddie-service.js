@@ -17,6 +17,7 @@ class Buddie {
     console.log('SERVICE ', {userId, buddieId})
     return this.buddie.post("/", {userId, buddieId }).then(response => response.data);
   }
+
   deleteBuddie(id) {
     return this.buddie.delete(`/${id}`).then(response => response.data);
   }

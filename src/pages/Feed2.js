@@ -5,8 +5,8 @@ import Swipeable from "react-swipy";
 import { withAuth } from "../lib/AuthProvider";
 import Card from "./../components/Card";
 import Button from "./../components/Button";
-// import mockUsers from "./mockUsers";
 import profile from '../lib/profile-service';
+import Navbar from "./../components/Navbar";
 
 const appStyles = {
   height: "100%",
@@ -53,7 +53,10 @@ class Feed2 extends Component {
   }
 
   likeUser = () => {
+    console.log("likeUser called");
+
     const { profiles, count} = this.state;
+
     if(count < profiles.length){
       const buddieId = profiles[count]._id;
       const { _id } = this.props.user;
@@ -65,8 +68,7 @@ class Feed2 extends Component {
 
   }
   handleSwipe = (direction) => {
-    direction === "right" ? this.likeUser() : console.log("reject")
-
+    // direction === "right" ? this.likeUser() : console.log("reject")
   }
 
 
@@ -87,7 +89,9 @@ class Feed2 extends Component {
     const { profiles } = this.state;
     console.log(this.state)
     return (
-      <div style={appStyles}>
+
+      <div style={appStyles} >
+        <Navbar/>
         <div style={wrapperStyles}>
           {profiles.length > 0 && (
             <div style={wrapperStyles}>

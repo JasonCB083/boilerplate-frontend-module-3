@@ -131,3 +131,58 @@ body {
   width: 200px;
   height: 200px;
   border-radius: 10%; }
+
+.buddies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px 10px;
+  box-shadow: 1px 1px 1px 1px #00000094;
+  border-radius: 5px;
+  background-color: white;
+  margin: 10px; }
+  .buddies-avatar {
+    text-align: center;
+    height: 60px;
+    width: 80%;
+    background-size: cover;
+    background-position: center; }
+  .buddies-img {
+    max-height: 83px; }
+  .buddies-half {
+    display: flex;
+    justify-content: center;
+    width: 50%; }
+  .buddies-btn-container {
+    justify-content: flex-end; }
+  .buddies-btn {
+    border-radius: 10px;
+    background: linear-gradient(96deg, #f1373c 0%, #ff7a01 100%);
+    margin: 8px 10px;
+    padding: 10px 13px;
+    justify-self: end; }
+  .buddies-img {
+    height: 20px;
+    width: auto; }
+
+body {
+  margin: 0; }
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ff7a01;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  box-shadow: 0 -3px 11px black; }
+  .navbar-link {
+    text-align: center;
+    height: 30px;
+    text-decoration: none;
+    font-family: 'Comfortaa'; }
+
+.body {
+  width: 100%; }

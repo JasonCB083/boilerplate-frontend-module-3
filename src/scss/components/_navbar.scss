@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ff7a01;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  box-shadow:  0 -3px 11px black;
+
+  &-link {
+      text-align: center;
+      height: 30px;
+      text-decoration: none;
+      font-family: 'Comfortaa'
+
+    }
+}
+
+.body {
+  width: 100%;
+}
