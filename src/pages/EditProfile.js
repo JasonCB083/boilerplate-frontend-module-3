@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { withAuth } from './../lib/AuthProvider';
 import { Link } from 'react-router-dom';
 import profile from './../lib/profile-service';
+import Navbar from "./../components/Navbar";
+
 
 class EditProfile extends Component {
 
@@ -51,19 +53,21 @@ class EditProfile extends Component {
 
   render() {
     return (
+      <div className="editprofile">
       <div>
-        <Link to={'/feed'}>
+      <Navbar/>
+        </div>
+        {/* <Link to={'/feed'}>
         <button>feed</button>
         </Link>
 
         <Link to={'/preference'}>
         <button>Preference</button>
-        </Link>
+        </Link> */}
 
         {/* <button onClick={logout}>log out</button> */}
-        <form onSubmit={this.handleFormSubmit}>
-          <label>User Name:</label>
-            <input
+        <form className="editprofile-form" onSubmit={this.handleFormSubmit}>
+            <input className="editprofile-input"
               type="text"
               name="username"
               placeholder="username"
@@ -71,8 +75,7 @@ class EditProfile extends Component {
               onChange={this.handleChange}
             />
 
-            <label>Email:</label>
-            <input
+            <input className="editprofile-input"
               type="text"
               name="email"
               placeholder="email"
@@ -80,8 +83,7 @@ class EditProfile extends Component {
               onChange={this.handleChange}
             />
 
-            <label>City:</label>
-            <input
+            <input className="editprofile-input"
               type="text"
               name="city"
               placeholder="city"
@@ -89,8 +91,7 @@ class EditProfile extends Component {
               onChange={this.handleChange}
             />
 
-            <label>Sport:</label>
-            <input
+            <input className="editprofile-input"
               type="text"
               name="sport"
               placeholder="sport"
@@ -99,12 +100,16 @@ class EditProfile extends Component {
             />
 
             <label>Picture:</label>
-            <input
-              type="file"
-              onChange={this.fileOnchange}
-            />
+            <div className="picture">
+              <img className="camera" src="https://image.flaticon.com/icons/svg/159/159829.svg"/>
+              <input
+                placeholder="picture"
+                type="file"
+                onChange={this.fileOnchange}
+              />
+            </div>
 
-            <input type="submit" value="Send" />
+            <input className="btn" type="submit" value="Send" />
         </form>
       </div>
     )

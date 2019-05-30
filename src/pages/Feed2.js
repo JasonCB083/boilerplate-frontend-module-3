@@ -99,15 +99,20 @@ class Feed2 extends Component {
                 buttons={({ right, left }) => (
                   <div style={actionsStyles}>
 
-                    <Button buttonClass="btn-red" onClick={() => {
+                    <Button className="btn-red feed" onClick={() => {
                       this.handleReject();
                       left()
-                      }}>Reject</Button>
+                      }}>Nah</Button>
 
-                    <Button buttonClass="btn" onClick={() => {
-                      this.handleAccept();
-                      right()
-                      }}>buddie time</Button>
+                    <Button
+                      className="btn feed"
+                      onClick={() => {
+                        this.handleAccept();
+                        right()
+                      }}
+                    >
+                      Pix me
+                    </Button>
 
                   </div>
                 )}
@@ -115,12 +120,11 @@ class Feed2 extends Component {
                 onAfterSwipe={this.remove}
               >
                 <Card>
-                  <h3>{profiles[0].username}</h3>
+                  <h3 className="user-name">{profiles[0].username}</h3>
                   <img className="user-image" src={profiles[0].image} />
-
-
                 </Card>
               </Swipeable>
+
               {profiles.length > 1 && (
                 <Card zIndex={-1}>
                   <h3>{profiles[1].username}</h3>
@@ -129,7 +133,7 @@ class Feed2 extends Component {
               )}
             </div>
           )}
-          {profiles.length < 1 && <p>No more profiles</p> }
+          {profiles.length < 1 && <p className="user-nomore">No more profiles</p> }
 
         </div>
       </div>

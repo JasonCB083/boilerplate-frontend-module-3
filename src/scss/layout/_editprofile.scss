@@ -1,18 +1,9 @@
-.signup {
+.editprofile {
   height: 100vh;
   justify-content: space-evenly;
   display: flex;
   flex-direction: column;
-  background:
-  linear-gradient(180deg, rgba(241,55,60,0.7665441176470589) 0%, rgba(255,122,1,0.4416141456582633) 100%);
   text-align: center;
-
-  &-title {
-    color: white;
-    font-size: 60px;
-    z-index: 4;
-    font-family: 'Comfortaa';
-  }
 
   &-form {
     display: flex;
@@ -33,6 +24,24 @@
     &::placeholder {
       color: gray;
     }
+
+  }
+
+  .picture {
+    position: relative;
+
+    .camera {
+      width: 50px;
+      position: absolute;
+      top: 10px;
+      left: 95px;
+    }
+
+    input {
+      opacity: 0;
+      margin: 20px 0;
+      padding-bottom: 15px;
+    }
   }
 
   .btn {
@@ -41,13 +50,6 @@
     padding: 16px 43px;
   }
 
-  p {
-    font-size: 18px;
-  }
-
-  .signup-link {
-    text-decoration: none;
-  }
 }
 
 body {

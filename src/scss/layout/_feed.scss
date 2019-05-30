@@ -1,5 +1,24 @@
-.user-image{
-  width: 200px;
-  height: 200px;
-  border-radius: 10%;
+.user {
+  &-image{
+    width: 250px;
+    height: 250px;
+    border-radius: 10%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &-name {
+    position: absolute;
+    top: -60px;
+    font-size: 20px;
+    color: rgb(78, 78, 78);
+    text-transform: uppercase;
+    font-family: 'Comfortaa';
+  }
+
+  &-nomore {
+    text-align: center;
+  }
 }
+
+

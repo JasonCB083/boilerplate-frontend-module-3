@@ -2,20 +2,24 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #ff7a01;
+  background-color: #f1373c;
   position: fixed;
   top: 0;
   z-index: 3;
   width: 100%;
-  box-shadow:  0 -3px 11px black;
+  // box-shadow: 0 -3px 11px black;
+  height: 50px;
 
   &-link {
-      text-align: center;
-      height: 30px;
-      text-decoration: none;
-      font-family: 'Comfortaa'
+    text-align: center;
+    height: 30px;
+    text-decoration: none;
+    font-family: 'Comfortaa';
 
+    img {
+      width: 26px;
     }
+  }
 }
 
 .body {

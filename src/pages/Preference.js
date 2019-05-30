@@ -34,18 +34,19 @@ class Preference extends Component {
     const {user, logout, isLoggedin} = this.props;
     const {inputs} = this.state;
     return (
-      <div>
+      <div className="preferences">
         <Navbar/>
-        <h1>I am Preferences</h1>
-        {inputs.map((input)=>{
+        <div className="preferences-title-container">
+          <p className="preferences-title">Choose your passion</p>
+        </div>
+        <div className="preferences-options">
+          {inputs.map((input)=>{
 
-          return <div style={{display: "flex", justifyContent: "space-around", flexDirection:"column", alignItems:"center"}}><p>test</p><button onClick={this.handleOnClick} value={input} className="btn">{input}</button></div>
-        })}
-        <Link to={'/feed'}>
-        <button>feed</button>
-        </Link>
-
-        <button onClick={logout}>log out</button>
+            return <div>
+                <button onClick={this.handleOnClick} value={input} className="btn option">{input}</button>
+              </div>
+          })}
+        </div>
       </div>
     )
   }

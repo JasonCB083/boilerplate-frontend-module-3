@@ -31,6 +31,7 @@ class Buddies extends Component {
     return(
       <div>
         <Navbar/>
+        <div className="buddies-container">
           <h4>buddies</h4>
 
           {buddies.map((buddieObj, index)=>{
@@ -38,14 +39,12 @@ class Buddies extends Component {
             <div className="buddies">
               <div className="buddies-half">
                 {/* <img className="buddies-avatar" src={buddieObj.image}/> */}
+                <h4 className="buddies-name" key={buddieObj._id}>{buddieObj.username}</h4>
                 <div className="buddies-avatar" style={{ backgroundImage: `url(${buddieObj.image})`}}>
-                  <h4 className="buddies-name" key={buddieObj._id}>{buddieObj.username}</h4>
-
-                </div>
-
               </div>
+
               <div className="buddies-half buddies-btn-container">
-                <button className="buddies-btn" onClick={ () => this.handleDelete(buddieObj._id) }>
+                <button className="buddies-btn trash" onClick={ () => this.handleDelete(buddieObj._id) }>
                   <img className="buddies-img" src="/images/delete-button.png" />
                 </button>
 
@@ -53,8 +52,10 @@ class Buddies extends Component {
                   <img className="buddies-img" src="/images/chat.png" />
                 </button>
               </div>
+            </div>
           </div>)
           })}
+        </div>
       </div>
     )
   }
