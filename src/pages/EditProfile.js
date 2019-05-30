@@ -21,13 +21,9 @@ class EditProfile extends Component {
     const { id } = this.props.match.params;
 
     profile.editOne(username, email, city, image, sport)
-    this.setState({
-      username: '',
-      email: '',
-      city: '',
-      image: '',
-      sport: ''
-    })
+      .then(() => {
+        this.getUserProfile()
+      })
   }
 
   handleChange = event => {
@@ -50,8 +46,21 @@ class EditProfile extends Component {
     .catch((error) => console.log(error))
   }
 
+  getUserProfile = () => {
+    profile.getOne(this.props.user._id)
+    .then((data) => {
+      let { city } = this.state;
+      city = city.length === 0 ? "Barcelona" : city;
+      this.setState({ username: data.username, city})
+    })
+  }
+
+  componentDidMount() {
+    this.getUserProfile()
+  }
 
   render() {
+    const { username, email, city, image, sport} = this.state;
     return (
       <div className="editprofile">
       <div>
@@ -71,7 +80,7 @@ class EditProfile extends Component {
               type="text"
               name="username"
               placeholder="username"
-              value={this.username}
+              value={username}
               onChange={this.handleChange}
             />
 
@@ -79,7 +88,7 @@ class EditProfile extends Component {
               type="text"
               name="email"
               placeholder="email"
-              value={this.email}
+              value={email}
               onChange={this.handleChange}
             />
 
@@ -87,7 +96,7 @@ class EditProfile extends Component {
               type="text"
               name="city"
               placeholder="city"
-              value={this.city}
+              value={city}
               onChange={this.handleChange}
             />
 
@@ -109,7 +118,7 @@ class EditProfile extends Component {
               />
             </div>
 
-            <input className="btn" type="submit" value="Send" />
+            <input className="btn" type="submit" value="Update" />
         </form>
       </div>
     )

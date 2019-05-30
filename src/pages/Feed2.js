@@ -127,7 +127,7 @@ class Feed2 extends Component {
 
               {profiles.length > 1 && (
                 <Card zIndex={-1}>
-                  <h3>{profiles[1].username}</h3>
+                  <h3 className="user-name">{profiles[1].username}</h3>
                   <img className="user-image" src={profiles[1].image} />
                 </Card>
               )}
