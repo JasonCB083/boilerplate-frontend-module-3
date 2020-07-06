@@ -2,26 +2,22 @@
 
 ## Description
 
-Describe your project in one/two lines.
+React app with front and backend called playpix which combines the ability of a dating app and a sports app to meet friends or more!
 
 ## User Stories
 
 -  **404:** As an anon/user I can see a 404 page if I try to reach a page that does not exist so that I know it's my fault
--  **Signup:** As an anon I can sign up in the platform so that I can start saving favorite restaurants
+-  **Signup:** As an anon I can sign up in the platform so that I can start saving
 -  **Login:** As a user I can login to the platform so that I can see my favorite restaurants
 -  **Logout:** As a user I can logout from the platform so no one else can use it
--  **Add Restaurants** As a user I can add a restaurant so that I can share it with the community
--  **List Restaurants** As a user I want to see the restaurants so that I can choose one to eat
 -  **Search Restaurants** As a user I want to search restaurants by name so that I know if it´s already in the platform
--  **Add to favorites** As a user I want to add a restaurant to favorite so that I can save the restaurants that I liked the most
--  **See my favorites** As a user I want to see my favorite restaurantes so that I can see the ones I liked the most
+-  **Add to favorites** As a user I want to add a profile to favorite so that I can save the profiles that I liked the most
+-  **See my favorites** As a user I want to see my favorite profiles so that I can see the ones I liked the most
 
 ## Backlog
 
 User profile:
-- see my profile
-- upload my profile picture
-- see other users profile
+
 - list of events created by the user
 - list events the user is attending
 
@@ -52,13 +48,7 @@ Homepage:
   - auth.logout()
   - auth.me()
   - auth.getUser() // synchronous
-- Restaurant Service
-  - restaurant.list()
-  - restaurant.search(terms)
-  - restaurant.create(data)
-  - restaurant.detail(id)
-  - restaurant.addFavorite(id)
-  - restaurant.removeFavorite(id)   
+  
 
 # Server
 
@@ -73,7 +63,7 @@ password - String // required
 favorites - [ObjectID<Restaurant>]
 ```
 
-Restaurant model
+dating model
 
 ```
 owner - ObjectID<User> // required
@@ -113,8 +103,4 @@ The url to your repository and to your deployed project
 
 [Deploy Link Frontend]()
 
-### Slides
 
-The url to your presentation slides
-
-[Slides Link](http://slides.com)
